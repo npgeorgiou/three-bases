@@ -11,17 +11,22 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 3. What decks play together | done: 3027 decks of 10 games, 17 groups | `work/deck_groups_nmf_17.*` |
 | 4. The links between concepts | done: 15745 concept pairs | `library/cards_db/roster/concept_links.tsv` |
 | 5. The map of what decks play together | done (a page only) | `factions/roster-map.html` |
-| 6. The factions, from what they do | the 10 of the trial are made, 8-12 concepts each; Kaptain agrees them | `work/kernel_factions.md`, `.tsv`, `work/lists/` |
+| 6. The factions, from what they do | the 10 of the trial made with the real kernel and a second pass; the method waits on Kaptain | `work/kernel_factions.md`, `.tsv`, `work/lists/` |
 | 7. Combos on this board | to do | |
 | 8. Game plan, then keywords | to do | |
 | 9. Stop 1 | to do | |
 
 ## Work for the next chat, in this order
-1. **Kaptain agrees the 10** (`work/kernel_factions.md`), then the 20 identities (7+ partners each), then step 7.
-2. **Open library errors**, not fixed:
-   - Odd engines ("when life or health is restored" in Moves and Kills brutally, "damage over time" in Moves): a
-     card's trigger counts for a link its effect made (Harold Schmidt pushes when healed; the push makes the link).
-     The fix changes how every link counts (`concept_tags.side_concepts`): a plan for Kaptain first.
+1. **Kaptain decides how a deck counts for a faction.** A deck is built on (score 1.96+) a median of 1 concept, so the
+   rule "decks built on half the kernel" finds 0 to 15 decks per faction, and the bricks from decks fall away. The
+   second pass (step 6.12) then gives kernels that answer the questions but lose the identity (Can't be broken without
+   armour, heal or shield). The comparison of the two sets is in the chat of 20 Nov 2026 (old set: git history of
+   `work/kernel_factions.md`, commit 6063528).
+2. **Then**: drop the 17 deck groups (step 3 keeps each deck's scores; its docs and `deck_groups_nmf.py` lose the
+   groups), the map placed by decks built on both concepts and coloured by faction, and the "when" counting rule
+   (`concept_tags.side_concepts`: a card's "when..." part counts only when the other card sets it off), shown to
+   Kaptain before and after.
+3. **Open library errors**, not fixed:
    - Into the Breach: repair that cures Fire or A.C.I.D. counts as "when health is restored" (36 cards).
    - Gwent: giving Spying counts as "give to the opponent" (44 cards) and Reset as heal; both unchecked.
    - Spawner (Into the Breach) and Spikedriver Colony (Monster Train) count as cheating death.

@@ -17,8 +17,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
   (`links.sqlite`). Each link keeps which effect of each card made it, so it counts only for those effects' concepts.
 - **Strong link**: two concepts joined by the step 4 rule through real card pairs: `cards` 1.2+, or `rare` 3+ with a
   `level` of 1+. A pair joined only by real decks is not a strong link.
-- **What decks play together**: step 3. A deck **leans** on a concept when its cards hold it far more than its game's
-  cards do (score above 1.96); a deck **holds** a concept by its share of cards with it, against its game's share. The
+- **What decks play together**: step 3. A deck is **built on** a concept when it has so many more cards with it than
+  its game's decks that chance can't explain it (score 1.96 or more: 8 heal cards where its game's decks average 2); a deck **holds** a concept by its share of cards with it, against its game's share. The
   17 groups of step 3 are concepts that real decks play together; they are not factions.
 - **Identity**: what a faction DOES, in plain words: "can't be broken", "kills brutally", "waits", "messes you up",
   "moves" (Kaptain). Never a trigger or a condition ("when another unit dies"): those are how its cards work.
@@ -193,23 +193,24 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       (Claude's; the 10 of the trial are in the script). Each is one idea (no fruit salad); together they are spread
       over the seven answers, and the game is a moving game, so moving is one of them.
    2. **The kernel**: the identity's usable concepts that are effects (never a trigger, a condition, or a drawback
-      unless the identity is about spending its own side) and that 10+ decks lean on, the 6 most leaned on. No
+      unless the identity is about spending its own side) that 10+ decks are built on, the 6 with the most decks. No
       "2+ games" rule: few games move, and Three Bases does (Kaptain). A concept two identities want goes to the one
       whose other kernel concepts' decks hold it more. A kernel under 4 concepts is widened by Claude with the family
       whose concepts its decks hold most and that fits the identity.
    3. **Engines, from card links**: usable concepts (triggers and conditions too) with a strong link to 2+ kernel
-      concepts, each of those links shown in 2+ games (one game's few pairs can be an accident: on 20 Nov 2026, 8 of 10
-      such card pairs read did not work together), and held by the kernel's decks at least as often as normal; ranked
+      concepts (in any number of games: a card pair that looks wrong is read and fixed in the library, never filtered
+      out), and held by the kernel's decks at least as often as normal; ranked
       by kernel links times the share of all its links that go to this kernel (so a concept real cards link to
       everything does not join every faction, nor a rare one with two links); at most 4. Each shows the real card pair
       behind its strongest kernel link.
-   4. **Bricks, from decks**: the concepts the kernel's decks hold 1.5x+ as often as their game's cards (per game with
+   4. **Bricks, from decks**: the kernel's decks are the decks built on at least half of its concepts (Kaptain). The
+      concepts the kernel's decks hold 1.5x+ as often as their game's cards (per game with
       3+ of its decks, averaged), held by a quarter of those decks, with no strong link to the kernel; another
       faction's kernel concept can be one (support: removal for "can't be broken"). Most held first, until about 12
       concepts in all. A faction still under 12 then takes what its kernel's decks hold the same way that real cards
       also link to its concepts (an engine past the 4, or another faction's kernel concept), most held first (Claude's).
    5. **Many-level sharing**: the factions are filled together, level by level (kernels, then engines, then bricks,
-      then what decks hold and cards link). A concept that would then be in more than 3 factions, counting those that
+      then what decks hold and cards link, then extras). A concept that would then be in more than 3 factions, counting those that
       have it from an earlier level, is never dropped: it goes to those it fits best (most kernel links for an engine,
       most held otherwise), and the others take their next best.
    6. **Checks**: every faction has an engine pair (two of its concepts real cards link), or its identity is changed;
@@ -237,6 +238,15 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       `work/answer_concepts.tsv` its own concepts give, else the way its extras give; what it cares about most is the
       first of the game's own things it has, else the highest-scoring on its list (factions may share it); its blind spot is named at step 9. An answer no way gives is fixed first in (10) with
       another extra; only when its list has no way for it is the identity changed.
+   12. **The real kernel, then a second pass** (Kaptain): from each faction's concepts and extras, per question (removes
+      a front unit, the back row, acts between lanes, holds a base, what it cares about) up to 2 concepts that answer
+      it (one way of two concepts, or two ways of one); a question none of them answers takes the best way from its
+      list. Each faction takes the options whose concepts go best together: two concepts score the higher of how many
+      times chance real cards link them and real decks are built on both (8 times chance or more = 1; a brick has no
+      card links, so decks carry it). Every kernel concept goes with another at a third of that or more; no two
+      factions answer a question with the same concept (it stays where it fits best; what it cares about may be
+      shared); no kernel concept is in more than 3 factions. Steps 3 to 11 then run again on the real kernel; the
+      identity's families are not used again.
    **Kaptain agrees the factions**, seeing per faction its identity, kernel, engines (with their real card pairs),
    bricks, partners with their lines, and answers.
 7. **Combos on this board.** For every two partners, Claude rates the combo with numbers on the board: STRONG (both
