@@ -57,7 +57,7 @@ act	mana_gain	refill or gain mana / spell mana (param amount, kind via target)	r
 act	gain_attack_token	the player gains the attack token (Rally)	extra_turn	attack_token_gained	27 Oct 2026, v1
 act	strike	the target unit strikes another target now	attack_now	strikes;damaged;survives_damage;dies;killed	27 Oct 2026, v1
 act	start_attack	start a free attack with the targets	attack_now	attacks;fights	27 Oct 2026, v1
-act	challenge	force a unit to block / choose its blocker	forced_attack	blocks;challenges	27 Oct 2026, v1
+act	challenge	force a unit to block / choose its blocker	target_choice	blocks;challenges	27 Oct 2026, v1
 act	stun	stun (cannot attack or block this round, removed from combat)	disable	given_keyword:Stun	27 Oct 2026, v1
 act	mark	mark the target for a later effect	mark_target		27 Oct 2026, v1
 act	capture	remove the target until the capturer leaves play	banish	leaves_play;keyword_used:Capture	27 Oct 2026, v1
@@ -728,7 +728,7 @@ keyword	MECHAZ0R	concept of having, using or giving this keyword (Duelyst: cards
 keyword	Opening Gambit	concept of having, using or giving this keyword (Duelyst: triggers when summoned from your action bar; concept is Claude's)	on_play		29 Oct 2026, v37 (Duelyst)
 keyword	Primal Flourish	concept of having, using or giving this keyword (Duelyst: a space whose friendly minions have Grow: +2/+2; concept is Claude's)	terrain		29 Oct 2026, v37 (Duelyst)
 keyword	Ranged	concept of having, using or giving this keyword (Duelyst: attacks from anywhere on the battlefield; concept is Claude's; Gwent: this ability can only be used while on the ranged row)	ranged		29 Oct 2026, v37 (Duelyst)
-keyword	Rebirth	concept of having, using or giving this keyword (Duelyst: when this dies it leaves a 0/1 Egg that hatches into the same minion before your next turn; concept is Claude's)	revive		29 Oct 2026, v37 (Duelyst)
+keyword	Rebirth	concept of having, using or giving this keyword (Duelyst: when this dies it leaves a 0/1 Egg that hatches into the same minion before your next turn; hatching is a transform, Kaptain 20 Nov 2026)	transform		29 Oct 2026, v37 (Duelyst)
 keyword	Sentinel	concept of having, using or giving this keyword (Duelyst: summoned as a 3/3 with no abilities; transforms into its true form when a hidden event happens on the opponent's turn; concept is Claude's)	trap_secret		29 Oct 2026, v37 (Duelyst)
 keyword	Shadow Creep	concept of having, using or giving this keyword (Duelyst: a space that damages enemy minions and Generals on it at the end of its owner's turn; concept is Claude's)	terrain		29 Oct 2026, v37 (Duelyst)
 keyword	Structure	concept of having, using or giving this keyword (Duelyst: the minion cannot move or attack; concept is Claude's)	cant_attack		29 Oct 2026, v37 (Duelyst)

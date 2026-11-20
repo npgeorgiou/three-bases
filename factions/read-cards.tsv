@@ -364,3 +364,11 @@ into_the_breach	Aegon Mortar	wheel (library suspects)	pushes and damages two til
 faeria	Flame Thrower	wheel (library suspects)	read by its name by mistake; 1 damage to all enemies
 gwent	Havfrue Singer	wheel (library suspects)	real heal trigger; its link is its summon row
 duelyst	Sunriser	wheel (library suspects)	real heal trigger, 2 damage to nearby enemies; its link is the position
+duelyst	Lightbender	wheel (library suspects)	dispels all spaces around it, both sides: my units moved there is no help (read a second time by mistake)
+duelyst	Sunset Paragon	wheel (library suspects)	all nearby minions damage themselves, both sides: my units put there is no help
+duelyst	Aperion's Claim	wheel (library suspects)	destroys all in 3x3, both sides: my units put there is no help
+duelyst	Glacial Fissure	wheel (library suspects)	8 damage to everything in the centre column, both sides: my units put there is no help
+stormbound	Witches of the Wild	wheel (library suspects)	drains all bordering units, mine included: my units put there is no help
+stormbound	Spellbinder Zhevana	wheel (library suspects)	hits frozen units in front: only enemies gain from being put there
+stormbound	Conflicted Drakes	wheel (library suspects)	hits all non-Dragon units in front, mine included (read a second time by mistake)
+marvel_snap	Enchantress	wheel (library suspects)	silences all Ongoing cards here, both sides: my cards put there is no help

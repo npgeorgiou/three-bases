@@ -12,7 +12,7 @@ The Elder Scrolls: Legends (todo.md item 12) runs step 3 again when done.
 | 3. What decks play together | done (19 Nov 2026): 3027 decks of 10 games; 17 groups by NMF, the most stable number (0.96), Kaptain's (`work/deck_groups_nmf.py --groups 17`) | `work/deck_groups_nmf_17.tsv`, `.md`, `.json` (every deck's card counts and the concepts it leans on, read by step 6) |
 | 4. The links between concepts | done (19 Nov 2026, on 3027 decks): 15933 concept pairs, 3171 strong links | `library/cards_db/wheel/concept_links.tsv` |
 | 5. The map of what decks play together | done (19 Nov 2026): a page to look at, no later step reads it | `factions/wheel-archetypes.html` |
-| 6. The factions, from what they do | in progress: the trial on 10 factions runs (`work/kernel_factions.py`); the work left is below | `work/kernel_factions.md` |
+| 6. The factions, from what they do | in progress: `work/kernel_factions.py` makes the 10 of the trial whole (concepts, theme, markers, list, extras, answers); it runs again on the fixed library, then Kaptain agrees the 10 | `work/kernel_factions.md`, `.tsv`, `work/lists/` |
 | 7. Combos on this board | to do | |
 | 8. Game plan, then keywords | to do | |
 | 9. Stop 1 | to do | |
@@ -22,51 +22,36 @@ The Elder Scrolls: Legends (todo.md item 12) runs step 3 again when done.
   an identity, what the faction DOES in plain words ("can't be broken"), made of concept-tree families; its kernel, the
   effects of those families that 10+ decks lean on; its engines, the concepts real cards strongly link to 2+ kernel
   concepts (links in 2+ games, played by the kernel's decks); its bricks, what the kernel's decks hold 1.5x+ as often as
-  their games with no card link (support: removal, protection); about 12 concepts; an engine pair each; at most half
-  shared; partners by real links between the two factions' concepts or by decks; each partner with a "how it plays"
-  line from its strongest real card pair. The 2-archetype factions, the pairing of step 3's groups and the deck
-  archetypes as building blocks are not part of the wheel.
-- `python3 factions/wheel/work/kernel_factions.py` (from the repo, about 10 seconds) runs the trial: 10 identities
-  (Claude's, in the script's `IDENTITIES`): Can't be broken, Kills brutally, Messes you up, Moves, Thrives on spells,
-  Waits, Swarms, Grows, Comes back, Eats its own. Waits and Swarms were thin (3 kernel concepts) and Claude widened them
-  by what their decks hold most (Waits: board wipe, look at cards and pick; Swarms: act the turn it arrives, +attack,
-  which went to Grows). Result: 6-12 concepts each (Waits 6, Swarms 7, Comes back 8), no two share over half, each
-  with its 5 strongest partners and their lines. Engines that fit well: Eats its own (cheat death, counts deaths, when
-  another unit dies), Can't be broken (taunt, grows again and again). Odd engines left: "when life or health is
-  restored" in Moves and in Kills brutally, "damage over time" in Moves; check them by their real card pairs.
-- In the script, against the rules: a brick more than 3 factions would take is dropped from all (silence was). The
-  rule is many-level sharing (step 6.5): the factions are filled level by level (kernels, engines, bricks); a concept
-  more than 3 factions want at one level goes to those it fits best and the others take their next best; it is never
-  dropped.
+  their games with no card link; a faction still under 12 takes what its decks hold that cards also link (Claude's);
+  every level shared by at most 3 factions; then its theme, design markers, list, 10 extras and answers.
+- `python3 factions/wheel/work/kernel_factions.py` (from the repo, about a minute) runs it on the 10 identities of the
+  trial (Claude's, `IDENTITIES` and `THEMES`): 8-12 concepts each (Swarms 8, Grows 9 and Waits 10: what they could
+  take is held by 3 factions already).
+- The library was fixed on 20 Nov 2026 (55 cards read for it, logged in `factions/read-cards.tsv`): Challenger is
+  target choice, not forcing attacks (97 Runeterra cards); Duelyst Rebirth and five eggs in Monster Train, Into the
+  Breach and Stormbound hatch (transform), never summon or revive; strikes on the neighbouring lanes are neighbours,
+  not other lanes (9 Inscryption cards); a unit back to hand when it dies does not cheat death; removing a keyword
+  is not having it (Gwent Seize removing Spying is no "give to the opponent"); in the links, Emberdrain given to my own
+  units is no help, a card that takes allies' keywords passes none on (426 Runeterra links), and Lightbender's
+  dispel on all around it needs enemies moved there, not my units. The concept fixes are in `cards.sqlite`; the egg
+  fixes (`fixes/*/v89, v54, v02`) and the links come with the rebuild below.
 
 ## Work for the next chat, in this order
-1. **The library suspects, looked at again; budget 60 cards** (Kaptain, 20 Nov 2026; a low-cost model reads, the main
-   chat never reads card texts; each card logged in `factions/read-cards.tsv`, never read twice). On 20 Nov 2026, 20
-   cards were read: 10 card pairs behind engines; 8 did not work together as their link says (their lines are in
-   `factions/read-cards.tsv`, "wheel (kernel factions)"). Look at each again: is the card's concept wrong in the library
-   (fix it there, by its rows, with test cases: `library/cards_db/START_DATABASE.md`), or is the link right and only
-   the reader wrong (Lightbender's Dispel in Duelyst does remove abilities: the reader may be wrong there)?
-   - Erratic Raptyr (Duelyst) turns into an egg that hatches; hatching is NOT a summon (Kaptain). Find how the library
-     tags hatching and eggs in every game and fix it for every such card. That is how "mill his deck" became an engine
-     of Comes back (Mnemovore + Erratic Raptyr).
-   - Primordium + Soul Siphon (Monster Train): tagged "pay later"; the reader saw only a buff.
-   - Khanuum-ka + Circle of Desiccation (Duelyst): tagged "cheat death"; it summons a new one when it dies.
-   - Cloudbringer's Grace + Obeyed Order (Runeterra): tagged "force enemy units to attack"; Challenger picks the blocker.
-   - Hydra + Raccoon (Inscryption): tagged "reaches other lanes"; the texts are keyword names only: read their rules.
-   - Inner Focus + Lightbender (Duelyst), Conflicted Drakes + Dubious Hags (Stormbound), Joachim de Wett + Rosa and
-     Edna var Attre (Gwent): links the reader saw as accidental.
-   The 60 go to other cards of the same tags, to see whether a tag is wrong on many cards. After fixes: `check_all.py`
-   (about 14 minutes) and `PYTHONHASHSEED=0 python3 links.py` (about 6): tell Kaptain and wait for his OK; then step 4
-   again (`mechanics_wheel.py links --concepts`) and step 6 again.
-2. **`kernel_factions.py`: many-level sharing** (step 6.5), in place of dropping.
-3. **Fill the thin factions toward 12** (Waits, Swarms, Comes back) and check the odd engines by their card pairs.
-4. **Remove what the wheel does not use**, everywhere (code, files, docs): `work/factions.py` with `work/factions.tsv`
-   and its themes; the `--kernels` option of `deck_groups_nmf.py` with `work/deck_groups_nmf_kernels.*`;
-   `work/concept_list.py` reads its factions from `kernel_factions.py`'s `.tsv`.
-5. **The rest of step 6** in `kernel_factions.py`: a `.tsv` beside the `.md`; each faction's design markers (what its
-   kernel's decks are like, step 3's markers); the theme (6.8), its list (6.9, `concept_list.py`), its extras (6.10),
-   its answers made final (6.11).
-6. **Kaptain agrees the 10**, then the 20 identities (7+ partners each), then step 7.
+1. **The rebuild, after Kaptain's OK**: `check_all.py` (about 14 minutes, loads the egg fixes) and
+   `PYTHONHASHSEED=0 python3 links.py` (about 6; its cases include the new ones); then step 2
+   (`work/concept_catch.py`: "Force enemy units to attack" and "Reaches other lanes" now have no cards), step 3
+   (`deck_groups_nmf.py --groups 17`), step 4 (`mechanics_wheel.py links --concepts`, its wheel cases) and step 6.
+2. **Open library findings** (found on 20 Nov 2026, not fixed): (a) the odd engines ("when life or health is
+   restored" in Moves and Kills brutally, "damage over time" in Moves) come from how a link counts: a card's trigger
+   is counted although the link was made by its effect (Harold Schmidt heals, then pushes; the push makes the link).
+   A change to `concept_tags.side_concepts` (count a giver's own effect only, a user's trigger too) is a plan for
+   Kaptain first. (b) Into the Breach's repair that cures Fire or A.C.I.D. counts as "when health is restored" on 36
+   cards. (c) Gwent: giving Spying counts as "give to the opponent" on 44 cards, unchecked. (d) Gwent Reset counts as
+   heal, unchecked. (e) Spawner (Into the Breach) and Spikedriver Colony (Monster Train) cheat death without coming
+   back. (f) Lines left to look at after the links fix: Marvel Snap Lady Deathstrike lost 7 lines (does she destroy
+   only enemies?) and Lockjaw -> Enchantress is new; a card that takes allies' keywords (Mask Mother) has no line to
+   the cards that give an ally a keyword (a missing line, Claude's suggestion in network.py `use_of`).
+3. **Kaptain agrees the 10**, then the 20 identities (7+ partners each), then step 7.
 
 ## What the next steps find in the files
 - Runeterra's spell mana rule is written (`read/runeterra/game_rules.jsonl`) but not built into `cards.sqlite` yet.
@@ -74,7 +59,8 @@ The Elder Scrolls: Legends (todo.md item 12) runs step 3 again when done.
 - Step 2 left: rerun `work/concept_catch.py` from `library/cards_db` only after a change to the concepts or verdicts.
 - The faction check (a finished faction's cards against its concepts and extras) and `tools/wheel_table_check.py`
   (the 20 factions' concepts, extras and answers) are written when step 9 and Stop 3 need them.
-- `work/make_stop1.py` is written for step 9.
+- `work/make_stop1.py` (step 9) reads files of an earlier way of working (`assign.tsv`, `themes.tsv`, `tools.tsv`); step 9
+  rewrites it to read `work/kernel_factions.tsv`.
 
 ## The numbers (library/cards_db)
 - `links.sqlite` is rebuilt only after `network.py` or `cards.sqlite` changed: `PYTHONHASHSEED=0 python3 links.py`

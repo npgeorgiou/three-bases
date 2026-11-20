@@ -147,6 +147,8 @@ def build(c):
             pe = (c.execute("select value from param where effect=? and param='event'", (eid,)).fetchone() or [None])[0]
             ps = ';'.join(f'{pn}={num(a) if a else v}' for pn, a, v in c.execute('select param, amount, value from param where effect=?', (eid,))) or None
             concept = (tree.get(('keyword', kwname.get(kref, ''))) if kref else None) or tree.get(('act', act))
+            if kref and act in ('remove_keyword', 'remove_keywords'):  # removing a keyword is not having it (Gwent Seize takes Spying away):
+                concept = tree.get(('act', act)) if s == 'enemy' else None  # it weakens an enemy; on my own unit it is no concept
             if act == 'cant' and not kref and pe in ('played', 'summoned'):
                 concept = 'play_restriction'  # "can't be played here", "only one card here" limit plays, no attack (Crimson Cosmos)
             elif s == 'enemy': concept = ON_ENEMY.get(concept, concept)  # the same keyword used on an enemy (Ascend an enemy unit)
@@ -225,7 +227,7 @@ RULES = [
     ('disable', 'flat_do', "act='cant' and on_side='enemy' and to_with is null and to_pick is null and to_kind is null and to_side is null and (param_event in ('turn_start','acts') or (param_event='attacks' and exists (select 1 from flat_do d2 where d2.card=flat_do.card and d2.ability=flat_do.ability and d2.act='cant' and d2.param_event='moves' and d2.on_side='enemy')))"),
     # staying power (Kaptain 30 Oct 2026): healing itself or my units every turn; can't die, or coming back when it dies
     ('regeneration', 'flat_do', "act='heal' and (on_pick='self' or coalesce(on_side,'')='mine') and coalesce(on_kind,'unit')!='player' and exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event in ('turn_start','turn_end','round_start','round_end'))"),
-    ('cheat_death', 'flat_do', "(act='cant' and param_event='dies' and coalesce(on_side,'mine')!='enemy') or (act in ('summon','revive','return_to_hand','copy','return_card') and (card_ref=card or on_pick='self') and coalesce(to_side,'mine')!='enemy' and exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event='dies' and w.obj_pick='self'))"),
+    ('cheat_death', 'flat_do', "(act='cant' and param_event='dies' and coalesce(on_side,'mine')!='enemy') or (act in ('summon','revive','copy') and (card_ref=card or on_pick='self') and coalesce(to_side,'mine')!='enemy' and exists (select 1 from flat_when w where w.card=flat_do.card and w.ability=flat_do.ability and w.event='dies' and w.obj_pick='self'))"),
     ('cant_move', 'flat_do', "act='cant' and param_event='moves' and on_pick='self'"),
     ('immobilize', 'flat_do', "act='cant' and param_event='moves' and on_side='enemy'"),
     ('bounce_enemy', 'flat_do', "act='return_to_hand' and (on_side='enemy' or (on_side is null and on_pick in ('chosen','all','random')))"),  # a unit of either side (Will of Ionia)
@@ -276,7 +278,6 @@ RULES = [
     ('lanes', 'flat_when', "obj_with like '%position % same_lane%'"),
     ('link_formation', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % in_circuit%'"),
     ('link_formation', 'flat_if', "coalesce(of_with,'') || coalesce(ev_obj_with,'') like '%position % in_circuit%'"),
-    ('cross_lane', 'flat_do', "act in ('strike','damage','kill') and coalesce(on_with,'') || coalesce(to_with,'') like '%sides of position enemy%'"),
     ('rows', 'flat_do', "coalesce(on_with,'') || coalesce(to_with,'') like '%position % same_row%' or coalesce(on_with,'') || coalesce(to_with,'') like '%position % furthest_row%'"),
     ('variable_stats', 'flat_do', "act='stat_change' and on_pick='self' and params glob '*=[a-z]*'"),
     # damage, then the same amount to my side (Runeterra Drain: heal the Nexus; Stormbound drain: strength to the drainer)

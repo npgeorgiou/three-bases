@@ -42,7 +42,7 @@ Sources:
 [4] https://duelspot.com/ deck pages and the Duelyst forum archive (static.animalcracker.art/duelyst/forum_archive): the decks below
 
 Neutral is not a faction. Zeal (bonus next to the General) is adjacency; Infiltrate (bonus on the enemy side) is
-territory_trigger; Rebirth (comes back from an egg) is cheat_death. No source with named combos was found.
+territory_trigger; Rebirth leaves an Egg when the minion dies (cheat_death, from its row) and the Egg's hatching is transform. No source with named combos was found.
 
 ## Factions
 
@@ -144,7 +144,7 @@ signature	Abyssian Host	terrain	Shadow Creep	https://store.steampowered.com/app/
 signature	Abyssian Host	summon	Wraithlings	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Abyssian Host	board_presence	strong in numbers	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Magmar Aspects	permanent_growth	Grow	https://store.steampowered.com/app/2004320/Duelyst_II/
-signature	Magmar Aspects	revive	Rebirth	https://store.steampowered.com/app/2004320/Duelyst_II/
+signature	Magmar Aspects	transform	Rebirth	https://store.steampowered.com/app/2004320/Duelyst_II/
 signature	Vanar Kindred	territory_trigger	Infiltrate	https://store.steampowered.com/app/2004320/Duelyst_II/
 archetype	Lyonar Kingdoms	sustain	healing, war of attrition	https://store.steampowered.com/app/2004320/Duelyst_II/
 archetype	Songhai Empire	spellslinger	spell synergies and damage combos	https://store.steampowered.com/app/2004320/Duelyst_II/
@@ -156,7 +156,8 @@ archetype	Magmar Aspects	scaling	Grow	https://store.steampowered.com/app/2004320
 ## Notes from the patterns check
 - Artifacts (category item) are deck cards equipped on the General: `merge_attach`, not `items_consumables`. What an artifact
   gives the General is `buff` (and stat_gain or the keyword where it says so).
-- Rebirth (a Dying Wish that leaves an Egg, which hatches into the minion) is `revive`, not `cheat_death`.
+- Rebirth (a Dying Wish that leaves an Egg, which hatches into the minion): the Egg left at death is `cheat_death`; the
+  keyword itself, the hatching, is `transform`, never `summon` or `revive` (Kaptain, 20 Nov 2026: hatching is not a summon).
 - Replace (put a card from the action bar back for a new one) is a redraw, not `recycle`; replacing the whole action bar is
   `hand_deck_swap`. "Action bar" is the hand.
 - Celerity is `multi_attack`; Rush is `haste`; "in front of" is a grid space, not a lane; a space that turns into Shadow Creep or

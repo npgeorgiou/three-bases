@@ -567,7 +567,7 @@ def lines_of(c, game):
                                      (act_ == 'stat_change' and ('=stat' in (ps_ or '') or 'count ' in w_))): continue  # a location's own
         # Power (Klaw: "the location to the right has +6 Power") is the same whoever stands there
         if re.search(r'(?<![a-z:])position \w+ \w+ of position(?: \w+)? chosen', w_): continue  # around a space the player picks
-        if not s_ and p_ == 'chosen' and act_ in ('damage', 'kill', 'obliterate', 'silence', 'stun'): s_ = 'enemy'  # a harm aimed by place is for enemies (L9)
+        if not s_ and p_ in ('chosen', 'all') and act_ in ('damage', 'kill', 'obliterate', 'silence', 'stun', 'remove_keyword'): s_ = 'enemy'  # a harm aimed by place is for enemies (L9; Lightbender dispels all around it)
         e_ = (t_, s_ or '', None, 'unit', None if k_ == 'position' else p_, w_, ab_ in lvl, 'state', (None, None, None), False, False, ''); takes['moves'].add(e_); src_t[('moves', e_)].add(f'{ab_}.{sq_}')
     for t_, ab_, k_, s_, p_ in c.execute("select card, ability, of_kind, of_side, of_pick from flat_if where test like 'amount_%' and attr in ('rows_between','distance')").fetchall():
         if t_ in cards: e_ = (t_, s_ or '', None, k_ or 'unit', p_, 'position is apart', ab_ in lvl, 'state', (None, None, None), False, False, ''); takes['moves'].add(e_); src_t[('moves', e_)].add(str(ab_))
@@ -1047,7 +1047,7 @@ def lines_of(c, game):
     return out
 
 
-BAD_STATUS = ('disable', 'immobilize', 'attack_lock', 'damage_over_time', 'debuff', 'forced_movement')  # statuses that hurt
+BAD_STATUS = ('disable', 'immobilize', 'attack_lock', 'damage_over_time', 'debuff', 'forced_movement', 'overload_debt')  # statuses that hurt
 
 
 NOT_AIMED = PUTS + ('repeat', 'increase_effect', 'level_up', 'draw', 'discard', 'shuffle_into_deck', 'put_on_top', 'look', 'reveal',
@@ -1518,7 +1518,7 @@ def doublers(c, game):
 def sharers(c):
     """cards whose text shares their own keywords with allies (Sivir level 2: "attacking allies have my keywords")"""
     if 'sharers' not in CACHE:
-        CACHE['sharers'] = {b for (b,) in c.execute("select card from flat_do where origin='own' and act='copy_keywords' and (on_pick='self' or to_pick='self')")}
+        CACHE['sharers'] = {b for (b,) in c.execute("select card from flat_do where origin='own' and act='copy_keywords' and to_pick='self'")}  # "X to Y" copies Y's keywords onto X: only to self shares (Mechanized Mimic takes)
     return CACHE['sharers']
 
 
@@ -1603,7 +1603,8 @@ def use_src(c, b, said, kw=None):
     elif said.startswith('helps it near your leader'): got = q("select ability from flat_if where card=? and of_kind='player' and of_with like '%position %'")
     elif said.endswith('which it counts'): got = q("select ability from flat_if where card=? and of_with like ?", f'%keyword is {kw}%') | when_self(('given_keyword',))
     elif said.endswith('own strength'): got = q("select ability from flat_do where card=? and act='remove_keyword'" + (' and keyword_ref=?' if kw else ''), *((kw,) if kw else ()))
-    elif said.endswith(('passes to its allies',)) or said.startswith('keeps the '): got = gives()
+    elif said.endswith('passes to its allies'): got = q("select ability from flat_do where card=? and act='copy_keywords'")
+    elif said.startswith('keeps the '): got = gives()
     elif said.endswith('gets through in full'): got = needs(('strikes_nexus', 'nexus_damaged', 'strikes'))
     elif said.startswith(('more power: it doubles', 'more strength', 'more power: its text reads')): got = stat()
     elif said.startswith('more power: its text uses the damage'): got = kws(POWER_USE) | q("select ability from flat_do where card=? and origin='own' and act in ('start_attack','strike')") | needs(('strikes', 'nexus_damaged', 'strikes_nexus')) | stat()
@@ -1731,6 +1732,7 @@ def aimed(c, game, nodes, broad):
             if rule and act in ('stat_change', 'grow') and generic_use(c, game)[b]['flags'] & {'level_hit', 'level_stat'} and \
                     any(raises(v) for k, v in (x.split('=', 1) for x in (ps or '').split(';') if '=' in x) if k in ('power', 'strength')):
                 out[(a, b)].append(('levels', 1.0 / n, what + ': helps it level up' + at), ({a_src}, use_src(c, b, 'more power: its text uses the damage')))  # it levels from the damage it deals (L24)
+            elif rule and act == 'give_keyword' and kw_tree(c, kw) in BAD_STATUS: continue  # Soul Siphon gives Emberdrain to all my units: a drawback, no help
             elif rule: out[(a, b)].append(('boosts' if isinstance(rule, str) else 'rules', 1.0 / n, what + at), b_src(b))  # stats given make it stronger; the rest change how it works
             elif helps_it(c, act, kw, ps): out[(a, b)].append(('boosts', 0.5 / max(1, len(hits)), (said_ or aim_said(act, kwn(kw), ps)) + at), b_src(b, said_))
             elif act in HARM_GAIN and not gains.get(b, set()) & HARM_GAIN[act]: continue  # my harm on my card: only for its own effect

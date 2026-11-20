@@ -13,3 +13,13 @@ w13	marvel_snap	Kid Omega	Archangel Horseman of Death	sacrifice	death_count	coun
 w14	gwent	Cyclops	Dagon: Risen	destroy	revive	none	the same family
 w15	gwent	Cyclops	Dagon: Risen	sacrifice	revive	count	the same family
 w16	runeterra	Mark of the Isles	Xolaani the Bloodweaver	destroy	count_payoff	none	the same family
+w17	monster_train	Bog Chrysalis	Bog Fly	summon	*	none	Kaptain 20 Nov 2026: hatching is a transform, not a summon (fixes v89/v54/v02; takes effect on the next rebuild)
+w18	monster_train	Kinhost Vessel	Kinhost Pupa	summon	*	none	Kaptain 20 Nov 2026: hatching is a transform, not a summon (fixes v89/v54/v02; takes effect on the next rebuild)
+w19	monster_train	Bogdeep Cocoon	Bog Wurmling	summon	*	none	Kaptain 20 Nov 2026: hatching is a transform, not a summon (fixes v89/v54/v02; takes effect on the next rebuild)
+w20	into_the_breach	Spiderling Egg	Spiderling	summon	*	none	Kaptain 20 Nov 2026: hatching is a transform, not a summon (fixes v89/v54/v02; takes effect on the next rebuild)
+w21	stormbound	Qordia’s Nest	Token Dragons	summon	*	none	Kaptain 20 Nov 2026: hatching is a transform, not a summon (fixes v89/v54/v02; takes effect on the next rebuild)
+w22	runeterra	Cloudbringer's Grace	Obeyed Order	target_choice	damage	count	wheel suspects, 20 Nov 2026: Challenger picks the blocker (target_choice), it forces no attack
+w23	duelyst	Erratic Raptyr	Mnemovore	revive	mill	none	Kaptain 20 Nov 2026: hatching from an egg (Rebirth) is no revive and no summon
+w24	monster_train	Soul Siphon	Primordium	overload_debt	buff	none	wheel suspects, 20 Nov 2026: Emberdrain given to my units helps no one
+w25	inscryption	Hydra	Raccoon	*	base_resource_gain	count	wheel suspects, 20 Nov 2026: Hydra kills, Scavenger gives Bones for it
+w26	duelyst	Inner Focus	Lightbender	untap	silence	none	wheel suspects, 20 Nov 2026: my readied unit moved next to Lightbender is dispelled too

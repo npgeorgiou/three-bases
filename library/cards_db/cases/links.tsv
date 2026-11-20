@@ -399,3 +399,8 @@ lk400	gwent	Cursed Scroll	Cow Carcass	none	acts on units	Kaptain 18 Nov 2026, wh
 lk401	gwent	Blightmaker	Cow Carcass	line	puts your units there	Kaptain 18 Nov 2026, wheel probe: a card that also puts units there keeps that link when its other move is in the deck		
 lk402	marvel_snap	Doctor Octopus	Alioth	line	moves enemy units	Kaptain 18 Nov 2026, wheel probe: cards pulled from the enemy hand onto a location are units moved there		
 lk403	marvel_snap	Mirage	Iron Patriot	none	more power	Kaptain 19 Nov 2026, wheel tag check: Mirage's +2 Power lands only on its copy of an enemy card		
+lk404	monster_train	Soul Siphon	Primordium	none	gives it Emberdrain	wheel suspects, 20 Nov 2026: Emberdrain on all my units is a drawback, no help		
+lk405	monster_train	Soul Siphon	Apex Imp	none	gives it Emberdrain	wheel suspects, 20 Nov 2026: the same family		
+lk406	duelyst	Inner Focus	Lightbender	none	moves your units	wheel suspects, 20 Nov 2026: Lightbender dispels all around it, my moved units too: only enemies moved there help		
+lk407	runeterra	Ranger's Resolve	Evelynn	none	which it passes to its allies	wheel suspects, 20 Nov 2026: a card that takes keywords from allies passes none on		
+lk408	runeterra	Golden Aegis	Sivir (level 2)	line	passes to its allies	wheel suspects, 20 Nov 2026: Sivir level 2 shares her keywords with attacking allies		
