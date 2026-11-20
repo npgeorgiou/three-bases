@@ -244,8 +244,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
       2 of the faction's concepts and extras that answer it (one way of two concepts, or two ways of one); a question
       none of them answers takes the best way from its list. Each faction takes the options that go best with its
       kernel: two concepts score the higher of how many
-      times chance real cards link them and real decks are built on both (8 times chance or more = 1; a brick has no
-      card links, so decks carry it). Every kernel concept goes with another at a third of that or more; no two
+      times chance real cards link them and real decks hold both (a deck holds a concept when its share of cards with
+      it is twice its game's average; 8 times chance or more = 1; a brick has no card links, so decks carry it). Every kernel concept goes with another at a third of that or more; no two
       factions answer a question with the same concept (it stays where it fits best; what it cares about may be
       shared); no kernel concept is in more than 3 factions. Steps 3 to 11 then run again on the real kernel; the
       identity's families are not used again.

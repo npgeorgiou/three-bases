@@ -94,11 +94,27 @@ for r in csv.DictReader(open(os.path.join(ROOT, 'library/cards_db/roster/concept
     cards, rare, level = float(r['cards'] or 0), float(r['rare'] or 0), float(r['level'] or 0)
     if cards >= 1.2 or (rare >= 3 and level >= 1):
         strong[frozenset((r['a'], r['b']))] = (cards, r['texts'].split(' | ')[0], int(float(r['games'] or 0)))
-    together[frozenset((r['a'], r['b']))] = max(float(r['cards'] or 0), float(r['decks'] or 0))
+    together[frozenset((r['a'], r['b']))] = float(r['cards'] or 0)
+def deck_together():
+    """how many times chance real decks hold both concepts: a deck holds a concept when its share of cards with it is
+    DECK_SHARE times its game's average or more"""
+    import numpy as np
+    cs = sorted(usable); ix = {c: i for i, c in enumerate(cs)}
+    M = np.zeros((len(decks), len(cs)))
+    for n, d in enumerate(decks):
+        tot = sum(d['counts'].values()) or 1
+        for c, v in d['counts'].items():
+            if c in ix: M[n, ix[c]] = v / tot
+    for g in {d['game'] for d in decks}:
+        rows = [n for n, d in enumerate(decks) if d['game'] == g]
+        avg = M[rows].mean(0); M[rows] = (M[rows] >= DECK_SHARE * avg) & (avg > 0)
+    p = M.mean(0); both = (M.T @ M) / len(decks)
+    lift = both / np.maximum(np.outer(p, p), 1e-9)
+    return {frozenset((cs[i], cs[j])): float(lift[i, j]) for i in range(len(cs)) for j in range(i + 1, len(cs)) if both[i, j] * len(decks) >= MIN_DECKS}
 def fit2(a, b):
     """how well two concepts go together, 0 to 1: the higher of how many times chance real cards link them and real decks
-    are built on both (a brick has no card links, so decks alone can carry it); FULL times chance or more is 1"""
-    v = together.get(frozenset((a, b)), 0)
+    hold both (a brick has no card links, so decks alone can carry it); FULL times chance or more is 1"""
+    v = max(together.get(frozenset((a, b)), 0), in_decks.get(frozenset((a, b)), 0))
     return min(1.0, math.log2(v) / math.log2(FULL)) if v > 1 else 0.0
 def cohesion(cs):
     cs = sorted(set(cs))
@@ -106,6 +122,7 @@ def cohesion(cs):
     return sum(ps) / len(ps) if ps else 0.0
 def wide(a, b): return linked(a, b)
 def linked(a, b): return a != b and frozenset((a, b)) in strong
+in_decks = deck_together()
 reach = {c: max(1, sum(linked(c, o) for o in usable)) for c in usable}  # how many usable concepts real cards link it to
 game_tot = {g: sum(v.values()) for g, v in D['game_counts'].items()}
 
