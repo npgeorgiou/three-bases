@@ -5,7 +5,7 @@ concept when it has DECK_CARDS or more cards with it and its share of them is DE
 work/deck_scores.json); the dots are laid out by springs on that closeness; a concept in no group sits beside
 the concepts it is closest to (layout()). The groups: concepts that real decks hold together, found by Louvain on that closeness (two concepts held
 together LINK_LIFT times chance or more, by MIN_DECKS decks or more); each dot takes its group's colour. Ticking
-factions of step 6 (work/kernel_factions.tsv) lights their concepts in the faction's colour (kernel, concepts, extras),
+factions of step 6 (work/kernel_factions.tsv) lights their concepts in the faction's colour (kernel, strong, the rest),
 the strong card links between them (roster/concept_links.tsv) and shows its deck style (design markers)."""
 import csv, json, math, os
 import networkx as nx
@@ -97,8 +97,8 @@ def main():
             'groups': found, 'group_colours': GROUP_COLOURS, 'dot': {c: i for i, g in enumerate(found) for c in g},
             'factions': [{'name': f['name'], 'does': f['does'], 'theme': f['theme'], 'kernel': f['kernel'].split(','),
                           'style': [D['markers'][m.split(':')[0]] for m in f['markers'].split(',') if m],
-                          'concepts': [c for c in f['concepts'].split(',') if c not in f['kernel'].split(',')],
-                          'extras': [c for c in f['extras'].split(',') if c]} for f in facs],
+                          'strong': [c for c in f['strong'].split(',') if c],
+                          'rest': [c for c in f['concepts'].split(',') if c not in f['kernel'].split(',') + f['strong'].split(',')]} for f in facs],
             'links': [[*sorted(p), t] for p, t in strong.items() if all(c in set(cs) for c in p)]}
     tpl = open(os.path.join(HERE, 'roster_map_template.html'), encoding='utf-8').read()
     open(os.path.join(HERE, '..', '..', 'roster-map.html'), 'w', encoding='utf-8').write(tpl.replace('/*DATA*/null', json.dumps(data)))

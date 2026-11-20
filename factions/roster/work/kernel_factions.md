@@ -2,7 +2,7 @@
 
 The world: Veyl, a world of drowned continents, floating islands and storm-rivers, where ten peoples fight over the three Wells that still give water.
 
-[K] marks a kernel concept.
+[K] marks a kernel concept, [S] a strong one: it goes with the kernel twice as often as chance or more.
 
 ## Can't be broken
 
@@ -26,39 +26,26 @@ The Shellwardens of Kesh: a coastal people who grow living coral over their bodi
 - [K] Heal every turn
 - [K] Defence gain
 - [K] Block points that wear off
-- [K] Neighbours matter
-- [K] Damage to several separate targets
-- [K] Swap positions
-- Stats matter
-- Damaged unit matters
-- Help from nearby allies
-- Taunt
-- Quests / objectives with rewards
-- Strikes with its defence
-- Temporary bonus
-- When life or health is restored
-- A unit levels up on the board
-- Immune / can't be targeted
-- Make a unit stronger
+- [S] Stats matter
+- [S] Damaged unit matters
+- [S] Help from nearby allies
+- [S] Taunt
+- [S] Quests / objectives with rewards
+- [S] Strikes with its defence
+- [S] Temporary bonus
+- [S] When life or health is restored
+- [S] A unit levels up on the board
+- [S] Immune / can't be targeted
+- [S] Make a unit stronger
+- [S] Neighbours matter
 - When an enemy arrives
 - My unit fights a chosen enemy
+- Extra turns or actions
+- Excess damage carries on
 
-### Design answers
+### What of it acts on enemy units
 
-- How it wins: its units do not die
-- Removes the front unit:
-  - Swap positions
-- Mainly removes back-row units:
-  - Damage to several separate targets
-- Mainly acts between lanes:
-  - nothing in real cards
-- Holds a base:
-  - Take less damage
-  - Defence gain
-  - Heal every turn
-  - Absorb one hit
-- The game thing it cares about:
-  - Neighbours matter
+- nothing: design must give it a way
 
 ### Deck style: what its decks are like
 
@@ -66,11 +53,11 @@ The Shellwardens of Kesh: a coastal people who grow living coral over their bodi
 
 ### Partners
 
-- Moves
-- Eats its own
 - Comes back
 - Kills brutally
 - Grows
+- Eats its own
+- Moves
 
 ## Kills brutally
 
@@ -93,41 +80,34 @@ The Ashen Hunt: riders on burn-scarred lizards who sweep the dune seas and leave
 - [K] Damage to many at once
 - [K] Send an enemy unit back
 - [K] Small repeatable damage
-- [K] Neighbours matter
-- [K] A unit levels up on the board
-- [K] Summon units / tokens
-- Counts deaths
-- Return my unit from the board to hand
-- When another unit dies
-- Bring back dead units
-- Attack right away
-- Damaged unit matters
+- [S] Counts deaths
+- [S] Return my unit from the board to hand
+- [S] When another unit dies
+- [S] Bring back dead units
+- [S] Attack right away
+- [S] Damaged unit matters
+- [S] Move enemy units
+- [S] Attack set to 0
+- [S] Steal from the opponent
+- [S] A unit levels up on the board
+- [S] Summon units / tokens
+- [S] Move my units
+- Clog the opponent's board
+- Swap positions
+- Hits my own side too
+- Damage to several separate targets
+
+### What of it acts on enemy units
+
+- Destroy outright
+- Banish / exile
+- Deal damage
+- Damage to many at once
+- Send an enemy unit back
+- Small repeatable damage
 - Move enemy units
 - Attack set to 0
 - Steal from the opponent
-- Move my units
-- Clog the opponent's board
-- Extra turns or actions
-- Swap positions
-
-### Design answers
-
-- How it wins: removes enemy units, many and hard
-- Removes the front unit:
-  - Deal damage
-  - Destroy outright
-- Mainly removes back-row units:
-  - Banish / exile
-  - Send an enemy unit back
-  - Deal damage
-  - Destroy outright
-- Mainly acts between lanes:
-  - Destroy outright in another lane
-- Holds a base:
-  - A unit levels up on the board
-  - Summon units / tokens
-- The game thing it cares about:
-  - Neighbours matter
 
 ### Deck style: what its decks are like
 
@@ -137,11 +117,11 @@ The Ashen Hunt: riders on burn-scarred lizards who sweep the dune seas and leave
 
 ### Partners
 
-- Moves
 - Comes back
-- Swarms
-- Can't be broken
 - Grows
+- Can't be broken
+- Swarms
+- Moves
 
 ## Messes you up
 
@@ -166,50 +146,46 @@ The Whisper Choir: masked singers whose songs unknit memory, break oaths and tur
 - [K] Attack the opponent's hand
 - [K] Make a unit weaker
 - [K] Can't act at all
-- [K] Deal damage
-- [K] Move enemy units
-- [K] Where units can be placed
-- [K] Steal from the opponent
-- Give my units or cards to the opponent
-- Send an enemy unit back
-- Move my units
-- Stacking keywords / counters
+- [S] Give my units or cards to the opponent
+- [S] Send an enemy unit back
+- [S] Move my units
+- [S] Move enemy units
+- [S] Stacking keywords / counters
+- Steal from the opponent
 - Change the game's rules
 - Make the opponent's cards cost more
+- Where units can be placed
 - Swap or replace hands or decks
 - When an enemy arrives
+- Deal damage
 - Look at cards and pick
+- Swap positions
 - Create new cards
-- Attack set to 0
 - Block points that wear off
 
-### Design answers
+### What of it acts on enemy units
 
-- How it wins: breaks the enemy's units and plans
-- Removes the front unit:
-  - Move enemy units
-  - Steal from the opponent
-- Mainly removes back-row units:
-  - Deal damage
-  - Steal from the opponent
-- Mainly acts between lanes:
-  - Make a unit weaker in another lane
-- Holds a base:
-  - Can't act at all
-- The game thing it cares about:
-  - Where units can be placed
+- Silence
+- Stat loss
+- Junk cards into a deck or hand
+- Attack the opponent's hand
+- Make a unit weaker
+- Can't act at all
+- Send an enemy unit back
+- Move enemy units
 
 ### Deck style: what its decks are like
 
-- Few big units
+- Many spells
+- Mostly units played from hand
 
 ### Partners
 
-- Moves
+- Comes back
+- Eats its own
+- Can't be broken
 - Kills brutally
 - Swarms
-- Can't be broken
-- Thrives on spells
 
 ## Moves
 
@@ -231,48 +207,43 @@ The Drift Clans: sky-raft nomads who ride the winds between floating islands and
 - [K] Terrain / board features
 - [K] Position and space
 - [K] Swap positions
-- [K] Damage to many at once
-- Change the game's rules
-- Attack right away
-- Ready a used unit again
-- Can't attack
-- Steal from the opponent
-- Give my units or cards to the opponent
+- [S] Neighbours matter
+- [S] Damage to many at once
+- [S] Change the game's rules
+- [S] Attack right away
+- [S] Ready a used unit again
+- [S] Deal damage
+- [S] Can't attack
+- [S] Steal from the opponent
+- [S] Give my units or cards to the opponent
 - Silence
 - Board wipe
 - Can't act at all
 - Having a card in play or hand
-- Hits my own side too
 - When another unit dies
 - Aura
 - Mill the opponent's deck
-- Stat loss
 
-### Design answers
+### What of it acts on enemy units
 
-- How it wins: wins by where its units and his stand
-- Removes the front unit:
-  - Move enemy units
-- Mainly removes back-row units:
-  - Damage to many at once
-- Mainly acts between lanes:
-  - Position and space in another lane
-- Holds a base:
-  - Terrain / board features
-- The game thing it cares about:
-  - Where units can be placed
+- Move enemy units
+- Damage to many at once
+- Deal damage
+- Can't attack
+- Steal from the opponent
 
 ### Deck style: what its decks are like
 
+- Many spells
 - Few big units
 
 ### Partners
 
-- Kills brutally
-- Comes back
 - Eats its own
+- Comes back
 - Can't be broken
 - Swarms
+- Kills brutally
 
 ## Thrives on spells
 
@@ -298,13 +269,12 @@ The Lantern Scribes: scholars who write with ink distilled from starlight; every
 - [K] Cards cost less
 - [K] Set a cost to a fixed number
 - [K] My spells and abilities get stronger
-- [K] Can't attack
-- [K] Send an enemy unit back
-- [K] Hand size matters
-- [K] Expensive card
-- [K] Turn an enemy into something weaker
-- Put into play for free
-- Enough spells played
+- [S] Put into play for free
+- [S] Expensive card
+- [S] Hand size matters
+- [S] Send an enemy unit back
+- [S] Enough spells played
+- [S] Turn an enemy into something weaker
 - Cost matters
 - Ready a used unit again
 - When a card is drawn
@@ -314,23 +284,12 @@ The Lantern Scribes: scholars who write with ink distilled from starlight; every
 - Fill my own discard pile
 - Reuse my cards
 - Junk cards into a deck or hand
+- Order of my plays matters
 
-### Design answers
+### What of it acts on enemy units
 
-- How it wins: spells that get stronger, cheaper and more of them
-- Removes the front unit:
-  - Send an enemy unit back
-  - Turn an enemy into something weaker
-- Mainly removes back-row units:
-  - Send an enemy unit back
-  - Turn an enemy into something weaker
-- Mainly acts between lanes:
-  - nothing in real cards
-- Holds a base:
-  - Can't attack
-- The game thing it cares about:
-  - Hand size matters
-  - Expensive card
+- Send an enemy unit back
+- Turn an enemy into something weaker
 
 ### Deck style: what its decks are like
 
@@ -338,14 +297,15 @@ The Lantern Scribes: scholars who write with ink distilled from starlight; every
 - High curve
 - Expensive units
 - Few big units
+- Mostly units played from hand
 
 ### Partners
 
-- Waits
+- Kills brutally
+- Comes back
+- Grows
 - Eats its own
 - Moves
-- Grows
-- Kills brutally
 
 ## Waits
 
@@ -370,53 +330,41 @@ The Deep Bell: an old order inside the mountain that winds a vast clockwork for 
 - [K] More or faster base resource
 - [K] Look at cards and pick
 - [K] Expensive card
-- [K] Countdown
-- [K] Damage over time
-- [K] Destroy outright
-- [K] Heal every turn
-- Enough spells played
-- Disrupt the opponent's plans
-- Cost matters
-- Order of my plays matters
-- Cards cost less
-- Hidden and revealed information
-- Deck contents matter
-- My spells and abilities get stronger
+- [S] Enough spells played
+- [S] Disrupt the opponent's plans
+- [S] Cost matters
+- [S] Order of my plays matters
+- [S] Cards cost less
+- [S] Hidden and revealed information
+- [S] Deck contents matter
+- [S] My spells and abilities get stronger
+- Countdown
 - When a spell is played
+- Heal every turn
 - Set a cost to a fixed number
 - When an enemy arrives
 - Keep my units alive
 - Board wipe
+- Attack set to 0
+- Hand size matters
 
-### Design answers
+### What of it acts on enemy units
 
-- How it wins: gets bigger every round, clears the board, then plays huge cards
-- Removes the front unit:
-  - Damage over time
-- Mainly removes back-row units:
-  - Destroy outright
-- Mainly acts between lanes:
-  - nothing in real cards
-- Holds a base:
-  - Countdown
-  - Heal every turn
-- The game thing it cares about:
-  - Expensive card
+- Disrupt the opponent's plans
 
 ### Deck style: what its decks are like
 
 - High curve
 - Expensive units
-- Expensive spells
 - Few big units
 
 ### Partners
 
-- Kills brutally
 - Comes back
-- Eats its own
-- Swarms
+- Grows
+- Kills brutally
 - Thrives on spells
+- Swarms
 
 ## Swarms
 
@@ -440,51 +388,42 @@ The Hive of Many Mouths: insect folk who hatch by the thousand from amber nests 
 - [K] Put into play for free
 - [K] Act the turn it arrives
 - [K] Copy cards or units
-- [K] Banish / exile
-- [K] Any damage kills
-- [K] Hand size matters
-- When I play another card
-- Destroys itself / temporary unit
-- Variety matters
-- Draw cards
-- Grows with what happened this game
-- Cost matters
-- When a spell is played
+- [S] When I play another card
+- [S] Destroys itself / temporary unit
+- [S] Variety matters
+- [S] Draw cards
+- [S] Banish / exile
+- [S] Grows with what happened this game
+- [S] Cost matters
+- [S] When a spell is played
 - Give my units or cards to the opponent
 - Repeat or double triggers
 - Sacrifice my own units
+- Any damage kills
 - Make a unit stronger
 - Alternative costs
 - Order of my plays matters
 - Create new cards
+- Hand size matters
 - Where units can be placed
 
-### Design answers
+### What of it acts on enemy units
 
-- How it wins: fills the board with many units that hit at once
-- Removes the front unit:
-  - Banish / exile
-  - Any damage kills
-- Mainly removes back-row units:
-  - Banish / exile
-- Mainly acts between lanes:
-  - Summon units / tokens in another lane
-- Holds a base:
-  - Summon units / tokens
-- The game thing it cares about:
-  - Hand size matters
+- Banish / exile
 
 ### Deck style: what its decks are like
 
+- Low curve
+- Cheap units
 - Mostly summoned units
 
 ### Partners
 
 - Kills brutally
-- Moves
-- Comes back
-- Eats its own
 - Grows
+- Moves
+- Can't be broken
+- Comes back
 
 ## Grows
 
@@ -507,49 +446,39 @@ The Rootborn: walking tree-giants who swell with every season they survive.
 - [K] Temporary bonus
 - [K] Strikes with its defence
 - [K] Set stats to a number
-- [K] Neighbours matter
-- [K] Attack gain
-- [K] Excess damage carries on
-- [K] My unit fights a chosen enemy
-- Help from nearby allies
-- Defence gain
-- Stats matter
-- Extra turns or actions
-- Stat gain
-- Attack right away
-- Expensive card
-- Stacking keywords / counters
+- [S] Help from nearby allies
+- [S] Defence gain
+- [S] Stats matter
+- [S] Extra turns or actions
+- [S] Attack gain
+- [S] Stat gain
+- [S] Attack right away
+- [S] My unit fights a chosen enemy
+- [S] Excess damage carries on
+- [S] Expensive card
+- [S] Stacking keywords / counters
 - Attack more than once
+- Neighbours matter
 - Absorb one hit
 - Take less damage
 - Can't move
 
-### Design answers
+### What of it acts on enemy units
 
-- How it wins: its units get bigger and bigger
-- Removes the front unit:
-  - My unit fights a chosen enemy
-- Mainly removes back-row units:
-  - Attack gain
-  - Excess damage carries on
-- Mainly acts between lanes:
-  - Make a unit stronger in another lane
-- Holds a base:
-  - Strikes with its defence
-- The game thing it cares about:
-  - Neighbours matter
+- My unit fights a chosen enemy
+- Excess damage carries on
 
 ### Deck style: what its decks are like
 
-- nothing stands out
+- Weak for its cost
 
 ### Partners
 
-- Comes back
 - Eats its own
+- Comes back
 - Kills brutally
-- Swarms
 - Can't be broken
+- Swarms
 
 ## Comes back
 
@@ -571,51 +500,43 @@ The Returning Tide: drowned sailors the sea sends back to the shore every dawn.
 - [K] Return my unit from the board to hand
 - [K] Reuse my cards
 - [K] Back to hand when it dies or leaves play
-- [K] Board wipe
-- [K] Destroy outright
-- [K] Discard my own cards
-- [K] Hits my own side too
-- Sacrifice my own units
-- Put into play for free
-- Attach or merge onto a unit
-- Destroys itself / temporary unit
-- When another unit leaves play
-- Grows with what happened this game
-- Top or bottom of the deck matters
-- Countdown
-- Stacking keywords / counters
-- Extra turns or actions
-- When I play another card
-- Absorb one hit
+- [S] Sacrifice my own units
+- [S] Put into play for free
+- [S] Attach or merge onto a unit
+- [S] Destroy outright
+- [S] Destroys itself / temporary unit
+- [S] When another unit leaves play
+- [S] Board wipe
+- [S] Grows with what happened this game
+- [S] Hits my own side too
+- [S] Top or bottom of the deck matters
+- [S] Countdown
+- [S] Stacking keywords / counters
+- [S] Discard my own cards
+- [S] Extra turns or actions
+- [S] When I play another card
+- [S] Absorb one hit
+- [S] Damage to many at once
+- [S] Stealth / hidden until it acts
+
+### What of it acts on enemy units
+
+- Destroy outright
+- Board wipe
 - Damage to many at once
-- Stealth / hidden until it acts
-
-### Design answers
-
-- How it wins: what it loses returns
-- Removes the front unit:
-  - Destroy outright
-- Mainly removes back-row units:
-  - Board wipe
-  - Hits my own side too
-- Mainly acts between lanes:
-  - Bring back dead units in another lane
-- Holds a base:
-  - Bring back dead units
-- The game thing it cares about:
-  - Discard my own cards
 
 ### Deck style: what its decks are like
 
+- Many spells
 - Few big units
 
 ### Partners
 
 - Grows
+- Can't be broken
 - Kills brutally
 - Moves
-- Can't be broken
-- Swarms
+- Waits
 
 ## Eats its own
 
@@ -638,54 +559,44 @@ The Ember Cult: fire-worshippers who feed their own to the furnace for power.
 - [K] Discard my own cards
 - [K] Hits my own side too
 - [K] Destroys itself / temporary unit
-- [K] Cheat death
-- [K] Deal damage
-- [K] Bring back dead units
-- Counts deaths
-- When another unit dies
-- Return my unit from the board to hand
-- Summon units / tokens
-- Row-wide lasting effects
-- Damaged unit matters
-- Grows with what happened this game
-- A unit levels up on the board
-- Back to hand when it dies or leaves play
-- Swap or replace hands or decks
-- When another unit leaves play
+- [S] Bring back dead units
+- [S] Counts deaths
+- [S] When another unit dies
+- [S] Return my unit from the board to hand
+- [S] Cheat death
+- [S] Summon units / tokens
+- [S] Row-wide lasting effects
+- [S] Damaged unit matters
+- [S] Grows with what happened this game
+- [S] A unit levels up on the board
+- [S] Back to hand when it dies or leaves play
+- [S] Swap or replace hands or decks
+- [S] When another unit leaves play
 - Reuse my cards
 - When a card is discarded
 - Grows again and again
+- Stat gain
 - Can't attack
 
-### Design answers
+### What of it acts on enemy units
 
-- How it wins: kills and spends its own units and cards for power
-- Removes the front unit:
-  - Deal damage
-- Mainly removes back-row units:
-  - Hits my own side too
-- Mainly acts between lanes:
-  - Sacrifice my own units in another lane
-- Holds a base:
-  - Cheat death
-  - Bring back dead units
-- The game thing it cares about:
-  - Discard my own cards
+- nothing: design must give it a way
 
 ### Deck style: what its decks are like
 
-- nothing stands out
+- Mostly summoned units
 
 ### Partners
 
 - Grows
 - Moves
 - Can't be broken
-- Swarms
-- Waits
+- Comes back
+- Messes you up
 
 ## In no faction yet
 
+- Damage over time
 - Transform my card into another
 - Switch stances or forms
 - Lifesteal / drain

@@ -19,7 +19,7 @@ ul.grp{margin:0 0 6px;padding-left:18px;font-size:14px}
 <svg id="map"></svg>
 <div id="side"><div id="info"></div>
 <h2>How to read it</h2>
-<p class="help">Each dot is a concept. Two dots sit close when real decks hold both more often than chance. With no faction ticked, a dot takes the colour of its group: concepts real decks play together (listed above); grey dots are in no group and sit beside the concepts they are played with most. Tick factions to light their concepts: big dots are the kernel, middle dots the other concepts, small dots the extras; lines, in the faction's colour, are strong card links between its concepts; its deck style is what its decks are like (many spells, few big units). Drag to move, wheel to zoom, hover a dot for its name.</p></div>
+<p class="help">Each dot is a concept. Two dots sit close when real decks hold both more often than chance. With no faction ticked, a dot takes the colour of its group: concepts real decks play together (listed above); grey dots are in no group and sit beside the concepts they are played with most. Tick factions to light their concepts: big dots are the kernel, middle dots its strong concepts (they go with the kernel twice as often as chance or more), small dots the rest of its list. Lines, in the faction's colour, are strong card links between its kernel and strong concepts; its deck style is what its decks are like (many spells, few big units). Drag to move, wheel to zoom, hover a dot for its name.</p></div>
 <div id="tip"></div>
 <script>
 const D=/*DATA*/null;
@@ -32,10 +32,10 @@ const nm=c=>D.names[c]||c;
 document.getElementById('picks').innerHTML=D.factions.map((f,i)=>`<label><input type="checkbox" value="${i}"><span class="sw" style="background:${D.colours[i]}"></span>${esc(f.name)}</label>`).join('');
 document.querySelectorAll('#picks input').forEach(b=>b.onchange=()=>{b.checked?picked.add(+b.value):picked.delete(+b.value);draw()});
 document.getElementById('none').onclick=()=>{picked.clear();document.querySelectorAll('#picks input').forEach(b=>b.checked=false);draw()};
-function role(c){let best=0,who=null;for(const i of picked){const f=D.factions[i];const r=f.kernel.includes(c)?3:f.concepts.includes(c)?2:f.extras.includes(c)?1:0;if(r>best){best=r;who=i}}return [best,who]}
+function role(c){let best=0,who=null;for(const i of picked){const f=D.factions[i];const r=f.kernel.includes(c)?3:f.strong.includes(c)?2:f.rest.includes(c)?1:0;if(r>best){best=r;who=i}}return [best,who]}
 function draw(){
   svg.innerHTML='';svg.setAttribute('viewBox',vb.join(' '));
-    for(const i of picked){const f=D.factions[i],own=new Set([...f.kernel,...f.concepts]);  // its strong card links, in its colour
+    for(const i of picked){const f=D.factions[i],own=new Set([...f.kernel,...f.strong]);  // its strong card links, in its colour
     for(const [a,b] of D.links){if(own.has(a)&&own.has(b)){const p=D.pos[a],q=D.pos[b];svg.appendChild(el('line',{x1:p[0],y1:p[1],x2:q[0],y2:q[1],stroke:D.colours[i],'stroke-opacity':.35,'stroke-width':1.2}))}}}
   for(const c in D.pos){
     const [x,y]=D.pos[c],[r,who]=role(c),i=D.dot[c];
@@ -46,7 +46,7 @@ function draw(){
     if(r>=2){const t=el('text',{x:x+r*4+2,y:y+4});t.textContent=nm(c).replace(/ \(.*\)$/,'');svg.appendChild(t)}
   }
   document.getElementById('info').innerHTML=[...picked].map(i=>{const f=D.factions[i],ch=(cs,k)=>cs.map(c=>`<span class="chip ${k}" style="${k?'background:'+D.colours[i]:''}">${esc(nm(c))}</span>`).join('');
-    return `<h2 style="color:${D.colours[i]}">${esc(f.name)}</h2><p><b>What it does:</b> ${esc(f.does)}.<br><b>Who they are:</b> ${esc(f.theme)}.</p><p><b>Kernel:</b><br>${ch(f.kernel,'k')}</p><p><b>Also plays:</b><br>${ch([...f.concepts,...f.extras],'')}</p><p><b>Deck style:</b><br>${f.style.length?ch(f.style,''):'nothing stands out'}</p>`}).join('')||D.groups.map((g,i)=>`<h2 style="color:${D.group_colours[i%D.group_colours.length]}">Group ${i+1}</h2><ul class="grp">${g.map(c=>`<li>${esc(nm(c).replace(/ \(.*\)$/,''))}</li>`).join('')}</ul>`).join('');
+    return `<h2 style="color:${D.colours[i]}">${esc(f.name)}</h2><p><b>What it does:</b> ${esc(f.does)}.<br><b>Who they are:</b> ${esc(f.theme)}.</p><p><b>Kernel:</b><br>${ch(f.kernel,'k')}</p><p><b>Strong:</b><br>${ch(f.strong,'')}</p><p><b>The rest of its list:</b><br>${ch(f.rest,'')}</p><p><b>Deck style:</b><br>${f.style.length?ch(f.style,''):'nothing stands out'}</p>`}).join('')||D.groups.map((g,i)=>`<h2 style="color:${D.group_colours[i%D.group_colours.length]}">Group ${i+1}</h2><ul class="grp">${g.map(c=>`<li>${esc(nm(c).replace(/ \(.*\)$/,''))}</li>`).join('')}</ul>`).join('');
 }
 let drag=null;svg.onmousedown=e=>{e.preventDefault();drag=[e.clientX,e.clientY,vb[0],vb[1]];svg.style.cursor='grabbing'};
 window.onmouseup=()=>{drag=null;svg.style.cursor='grab'};

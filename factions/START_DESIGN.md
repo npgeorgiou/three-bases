@@ -25,7 +25,7 @@ take a base, hold it, or take it from the enemy?
 
 ## THE THINKING PROCESS (in this order; no step skipped)
 Step 0 (Kaptain, 9 Nov 2026): the faction's place on the roster (`factions/12-roster.txt`) comes
-first. Its identity (what it does), its concepts (kernel, engines, bricks) and synergies, its extras, theme, six
+first. Its identity (what it does), its concepts (kernel and strong concepts first) and synergies, theme, six
 answers, partners, game plan and keywords are decided there, for all 20 factions together, not in the faction's chat
 (`START_DESIGN-1-roster.md`, steps 6-9).
 Steps 1-6 come from the library, never from memory. Run the queries below on all games (`ask.py all ...` from
@@ -65,12 +65,12 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
       or hit by enemy spells".
    6. What it cares about: which of the game's own things it cares about most; factions may share it. Example: the
       discard pile.
-   7. Blind spot: what none of its concepts and extras give, on any card. Example: it never draws cards.
+   7. Blind spot: what none of its concepts give, on any card. Example: it never draws cards.
 3. **Its identity, concepts and blind spots** (taken from the roster). Its identity: what it does ("can't be broken").
-   Its concepts: its kernel (the effects that do it), engines (concepts that work through links: my units die -> my
-   units gain when an ally dies) and bricks (concepts its decks play that work alone: removal, protection). They are
-   its character, not all its cards use: its cards use its list a lot (START_DESIGN-2, "How cards fit together"). Its
-   design markers ("many spells", "cheap units", "low curve": what its kernel's decks are like) set its cost curve,
+   Its concepts: one ranked list of 22, its kernel (the effects that do it) first; the kernel and its strong concepts
+   (fit 1/3 or more) are what it is about, its character, not all its cards use: its cards use its list a lot
+   (START_DESIGN-2, "How cards fit together"). Its deck style, the design markers ("many spells", "cheap units",
+   "low curve": what its decks are like) set its cost curve,
    its spell share and its unit numbers. Its blind spot (step 2.7) plus any other things the roster says it never has; its cards never make up for them,
    it plays around them. A blind spot is never one of the two things every faction needs (hold dots, remove enemies),
    only one way of doing them: "no kill spells" is a blind spot, "no removal" is not.
@@ -78,9 +78,9 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    units, against a fortress that never has more than 3 units and moves defence between them. Write one sentence per
    other faction saying why a game between the two feels different.
 5. **Synergies, game plan and keywords, from the roster** (never new ones here). Steps 5-8 use the faction's concepts
-   and extras (`factions/roster/work/kernel_factions.md`) and read its list (`factions/roster/work/lists/<letter>.tsv`: every
-   other concept of the library with its score for how strongly it links to its own concepts, its level and in
-   how many games): what a card draws on beyond its concepts and extras comes from it, highest scores first. A synergy is a link real cards show between two
+   (`factions/roster/work/kernel_factions.md`) and read its list (`factions/roster/work/lists/<letter>.tsv`: every
+   other concept of the library with its score for how strongly it links to what it is about, its level and in
+   how many games): what a card draws on beyond its concepts comes from it, highest scores first. A synergy is a link real cards show between two
    of its own concepts; write each from its link texts as "I do X -> I gain from X" ("my units die -> my other units
    grow"). A synergy is broad: 30+ of the faction's cards can make it happen or use it. One card's effect ("a gun fires") is not a synergy. Each synergy
    grows in at least one of three ways:
@@ -92,7 +92,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
      as the enemy, my allies here strike twice."
 6. **Three ways to play** (never filler). They are built around the
    faction's game plan and keywords from the roster (`START_DESIGN-1-roster.md` step 8): the keywords are its backbone,
-   not all of its cards; the rest of each way comes from its extras and its list.
+   not all of its cards; the rest of each way comes from the rest of its concepts and its list.
    Each way builds a different board and asks for different decisions. For each, write which rows and cells it fills,
    its cost 1-4 opening, its 4-6 middle, its 6+ finish, and its Leaders (the 5 are spread over the ways). Test: two ways that put the same
    kind of units in the same cells and win the same way are one way.
@@ -118,7 +118,7 @@ does; card texts are read only within the faction's 100 (START_DESIGN-3, "Readin
    The failure this stops: 14 cards of one faction said "round end: I strike the nearest enemy", with different stats.
    No two cards may have the same WHEN + WHAT + ON WHOM, and no WHEN + WHAT may be on more than 3 cards.
 10. **Checks**: START_DESIGN-2 section 2 and START_DESIGN-3 sections 2b-5, then `python3 tools/design_gate.py <letter>` until it prints PASS. Then the faction check
-   (the faction's cards against its concepts and extras in `factions/roster/work/kernel_factions.md`); if it drifted, fix the faction, not the roster. Code only after Kaptain
+   (the faction's cards against its concepts in `factions/roster/work/kernel_factions.md`); if it drifted, fix the faction, not the roster. Code only after Kaptain
    agreed steps 1-6.
 
 Absolute limits (Kaptain): no rarities (Common, Rare, Legendary...); every card is balanced by its cost alone. No

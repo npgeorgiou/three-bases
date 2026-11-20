@@ -2,22 +2,23 @@
 12. THE ROSTER: designing 20 factions together
 ==================================================================
 Why: designing factions one by one from a theme loses what makes each faction unique and how its cards connect.
-Each faction's identity, concepts, extras, seven answers, partners, game plan and keywords come first, for all 20
+Each faction's identity, concepts, seven answers, partners, game plan and keywords come first, for all 20
 factions at once; the theme comes right after its concepts. The steps, in order, with their stops:
 factions/START_DESIGN-1-roster.md. Commands: factions/roster/PIPELINE.md.
 
 Principles
-1. A faction is what it DOES, one idea in plain words ("can't be broken"): its kernel is the effects that do it plus
-   the concepts that answer the board for it; the rest of its concepts and its extras are the ones that go best with
-   that core, by real card links or by real decks that play them together (armour and shield are rarely linked by
-   cards, but decks play them together).
-2. A faction is strong at what its own concepts do. Its blind spot is what none of its concepts and extras give
-   ("never draws cards").
+1. A faction is what it DOES, one idea in plain words ("can't be broken"): its kernel is the effects that do it; the
+   rest of its 22 concepts are the ones that go best with that kernel, by real card links or by real decks that play
+   them together (armour and shield are rarely linked by cards, but decks play them together). Its kernel and the
+   concepts that go with it twice as often as chance are what it is about.
+2. A faction is strong at what its own concepts do. Its blind spot is what none of its concepts give ("never draws
+   cards"). Its seven answers are written in design from its own concepts and the game's things, in any way cards
+   allow.
 3. Every faction differs from every other in each of the seven answers, except which of the game's own things it
    cares about most, which factions may share.
 4. Combos are trigger -> payoff between factions: a card of one makes the thing a card of another gains from. Every
    faction combines well with at least 7 others. Shared keywords are the main source of combos; every faction also
    has at least 1 keyword of its own. Each faction's chat adds more hooks.
-5. Each faction, once built, is checked against its concepts and extras; if it
+5. Each faction, once built, is checked against its concepts; if it
    drifted, the faction is fixed, not the roster.
 6. Identity also lives in the cost curve, the stats and how a faction feels to play, not only in what cards do.

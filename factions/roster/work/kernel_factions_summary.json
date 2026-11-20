@@ -1,1 +1,1 @@
-{"kernel cohesion": 0.332, "whole cohesion": 0.293, "questions answered": 47, "answers from rare concepts": 6, "common concepts placed": 88, "common concepts": 93, "overlap mean": 0.079, "overlap max": 0.294, "kernel size": [9, 9, 10, 7, 11, 9, 7, 10, 8, 7]}
+{"kernel cohesion": 0.281, "about cohesion": 0.351, "whole cohesion": 0.302, "strong concepts": [12, 12, 5, 9, 6, 8, 8, 11, 18, 13], "nothing acts on enemy units": ["Can't be broken", "Eats its own"], "common concepts placed": 87, "common concepts": 93, "overlap mean": 0.082, "overlap max": 0.375}

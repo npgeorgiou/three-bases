@@ -11,22 +11,12 @@ One chat does one step; at its end, mark the step done here and say what it left
 | 3. The real decks' scores | done: 3027 decks of 10 games | `work/deck_scores.json` |
 | 4. The links between concepts | done: 15745 concept pairs | `library/cards_db/roster/concept_links.tsv` |
 | 5. The map | done (a page only; made after step 6) | `factions/roster-map.html` |
-| 6. The factions, from what they do | the 10 of the trial made the agreed way; Kaptain checks them | `work/kernel_factions.md`, `.tsv`, `work/lists/` |
+| 6. The factions, from what they do | the 10 of the trial made (21 Nov 2026); Kaptain checks them | `work/kernel_factions.md`, `.tsv`, `work/lists/` |
 | 7. Combos on this board | to do | |
 | 8. Game plan, then keywords | to do | |
 | 9. Stop 1 | to do | |
 
 ## Work for the next chat, in this order
-0. **Design answers in step 6**: Claude's proposal of 21 Nov 2026, waiting for Kaptain's go. Kaptain: the step that
-   adds answer concepts to the kernel and fills again messes things up, and the answer table is far too narrow
-   (removal can be steal, swap, moving my unit in to kill it, recall, silence, a bomb that forces a move, and more).
-   - The faction is the core and its fill, nothing added; the script picks no answers.
-   - The answers are written in design (Claude with Kaptain), each from the faction's own concepts and the game's
-     things (ranged units, rows, supply, lanes), as freely as the cards allow; the answer table is dropped.
-   - The script only flags a faction whose core and fill have nothing that acts on enemy units.
-   - Tried earlier on the 10: how well two concepts go is the higher of card links and decks, so one wrong card
-     number wins (Swarms banish with summon: cards 5.9x chance, decks 1.1x); the lower of the two, with decks counted
-     from 2 cards, left 5 of 33 picks unbacked.
 1. **Fix the library errors found on 20 Nov 2026**, each in the library with test cases (`library/cards_db/START_DATABASE.md`,
    "Fixing errors"; a reading budget from Kaptain):
    - A link does not reliably record which of its two cards acts and which answers (`links.sqlite`: a and b). So a
@@ -49,8 +39,9 @@ One chat does one step; at its end, mark the step done here and say what it left
 2. **Kaptain checks the 10** (`work/kernel_factions.md`); the method stays on 10 factions until he is happy, then 20
    with a limit of 4-5 factions per concept and 7 partners.
 3. **Kaptain brainstorms factions** with `work/make_faction.py` (one faction from concepts he gives).
-4. Odd answers to look at with Kaptain: Can't be broken removes back-row units with "hits my own side too"; Comes back
-   removes front units with "swap positions".
+4. **Open with Kaptain**: fit takes the higher of the card number and the deck number, so one wrong card number is
+   enough (Swarms' banish: cards 5.9 times chance with summon, decks 1.1). Tried on 20 Nov 2026: the lower of the two,
+   with decks counted from 2 cards, left 5 of 33 answer picks unbacked against 14 of 38. Decide after the library fixes.
 
 ## What the next steps find in the files
 - Runeterra's spell mana rule is written (`read/runeterra/game_rules.jsonl`) but not built into `cards.sqlite` yet.
@@ -71,7 +62,7 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
 - "The interaction between lanes, for each faction, must be RELATED to their CORE": lane interaction is moving to
   another lane, moving or using supply from another lane, "if you control another lane"; never an enemy summoned in
   another lane (20 Nov 2026).
-- The back row is really behind the front; its answers stay, they must fit the faction (20 Nov 2026).
+- The back row is really behind the front; how a faction removes there must fit the faction (20 Nov 2026).
 - Industry words: a **synergy** is a link real cards show between two concepts ("my units die -> my other units
   grow"); a **mechanic** is a keyword, a word on many cards that stands for one rule (Magic's Exploit) (18 Nov 2026).
 - "I want to create whole factions" (20 Nov 2026). A faction's kernel is what the faction DOES, never a trigger or a
@@ -87,10 +78,13 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
 - No "2+ games" rule for a kernel: "we dont have many moving games, and my game is a moving game" (20 Nov 2026).
 - Claude does the bulk of the work, "so we have something that more or less works" (20 Nov 2026).
 - Step 3 keeps only each real deck's scores; no groups of decks (20 Nov 2026).
-- The kernel is the identity's core plus, for each board question the core does not answer, about 2 concepts that
-  answer it; the rest of the faction is what fits the core best (20 Nov 2026: way C of three compared).
-- A deck counts for a faction when it holds the kernel's concepts together, as a share of its cards; fit counts both
-  card links and decks; extras count toward the limit of 3 factions per concept (20 Nov 2026).
+- A faction is one ranked list of 22 concepts: its kernel, then what fits the kernel best; no concepts are added for
+  the seven answers, which are written in design (21 Nov 2026). What a faction is about: its kernel and the concepts
+  that go with it twice as often as chance or more; partners, deck style and its list look only at these (21 Nov 2026).
+- Removal can be many things: "Steal, swap, exchange with my unit, move my own unit there so it kills it, recall it,
+  silence it, putting a bomb that explodes next turn so the back row unit has to use supply to move" (21 Nov 2026).
+- A deck counts for a faction when it holds the faction's concepts together, as a share of its cards; fit counts both
+  card links and decks (20 Nov 2026).
 - The factions' peoples come from one new world, never a real one; a hidden real-world model is fine (20 Nov 2026).
 - The factions page is one plain sheet per faction; numbers go to a separate page (20 Nov 2026).
 - Hatching from an egg is NOT a summon (20 Nov 2026).
@@ -100,10 +94,10 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   are off the list (other archetypes make their own combos); Cycling is part of Wheels (18 Nov 2026). Discard / 8-Rack
   stays on it although real cards don't link its two parts: future improved games will beef it up (17 Nov 2026).
 - Cards tagged with the wrong concept are examined and fixed; "Return my unit to hand" is split into smaller concepts
-  (18 Nov 2026). Its theme is picked right after its concepts and breaks ties between concepts that score about the
-  same. Its list leaves out its own concepts. Its extras, 8 to 12, the same number for every faction. Its blind spot is what none of its concepts and extras give ("never draws cards"),
+  (18 Nov 2026). Its theme is picked right after its concepts. Its list leaves out what it is about. Its blind spot is
+  what none of its concepts give ("never draws cards"),
   named at step 9 (19 Nov 2026). Combos (step 7) come before the game plan and keywords (step 8). A finished faction
-  is checked against its concepts and extras (18 Nov 2026).
+  is checked against its concepts (18 Nov 2026).
 - Keywords are shared, which is what makes factions combo: no keyword is barred from any faction, each is mostly on the
   factions that obviously gain from it, and every faction has at least 1 keyword of its own. All keywords are made
   new for the 20 (18 Nov 2026).
@@ -124,9 +118,9 @@ Only what Kaptain said himself goes here, in his words; Claude's own rules go el
   whole faction. A keyword that fits the theme but grows from no synergy of the factions that carry it is never made.
 - Each faction answers seven questions, one line each: how it wins, how it removes the front unit, how it MAINLY
   removes back-row units, how it MAINLY acts between lanes, how it holds a base, which of the game's own things it
-  cares about most (factions may share it), its blind spot (what none of its concepts and extras give: "never draws
-  cards"). Removing: his unit leaves its cell; holding: his unit
-  stays, but the base stays mine (18 Nov 2026).
+  cares about most (factions may share it), its blind spot (what none of its concepts give: "never draws cards").
+  Removing: his unit stops being a threat where it stands; holding: his unit stays, but the base stays mine (18 Nov
+  2026).
 - Stop 1 pages: juicy and easy to read; one line per answer; one line per partner faction saying HOW the combo plays.
 - Combos are judged once, on this board (step 7): STRONG / OK / WEAK / NONE / AGAINST; partners =
   STRONG or OK, 7+ each; `combos.tsv` has a test column, and what doesn't work in play is dropped.
