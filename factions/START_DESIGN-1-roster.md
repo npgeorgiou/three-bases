@@ -169,7 +169,8 @@ words Kaptain uses ("small hits", "the rest of the hit goes into the unit behind
    than chance (a deck holds a concept when it has 2 or more cards with it and their share is twice its game's
    average); springs lay the dots out. The groups: concepts real decks play together (held together 1.5 times chance
    or more by 10 or more decks, found by Louvain); with no faction ticked each dot has its group's colour, the groups
-   are listed on the right, and concepts in no group stand in a row at the bottom. Ticking factions lights their
+   are listed on the right, and a concept in no group (grey) sits beside the 3 grouped concepts real decks hold with it most, or, when no
+   decks do, the 3 real cards link it with most, or else beside its parents and children in the concept tree, or the concepts that share a parent with it. Ticking factions lights their
    kernel, other concepts and extras, draws in the faction's colour the strong card links between its concepts, and
    shows its deck style (its design markers).
 6. **The factions, from what they do** (by script: `work/kernel_factions.py` -> `work/kernel_factions.md`, one sheet
